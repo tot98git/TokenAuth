@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
  */
 
 public class DBManager {
-    private static String apiKey="gjSxl9Z-Wm4y98CXt993THkR-jan3LTT";
+    private static String apiKey="";
     private static String db="androidappdb";
     private static String coll="users";
     public static String getAddressApi(){
