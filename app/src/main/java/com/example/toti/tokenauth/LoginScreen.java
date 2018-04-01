@@ -16,6 +16,9 @@ import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 
 public class LoginScreen extends AppCompatActivity {
     private Button btnLogin;
@@ -83,6 +86,7 @@ public class LoginScreen extends AppCompatActivity {
             if (params[1].length() != 0 || params[2].length() != 0){
                 if (hh.getHttpData(urlString).contains("1")) {
                     ifExists = true;
+                    tokenColl.generateToken(usrTxt.getText().toString());
                 }
         }
             return "";

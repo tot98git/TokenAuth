@@ -37,11 +37,9 @@ public class tokenActivity extends AppCompatActivity {
         username=extras.getString("username");
         txtGivenUsername.setText(username.toUpperCase());
         final Toast tost = Toast.makeText(getApplicationContext(), "Code send!", Toast.LENGTH_SHORT    );
-        tknColl.createToken(username);
         txtResend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tknColl.generateToken(username);
                 tost.show();
             }
         });

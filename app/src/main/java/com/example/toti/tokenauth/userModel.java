@@ -27,7 +27,7 @@ public class userModel {
     public void setUsername(String usr){
         username=usr;
     }
-    public String email(){
+    public String getEmail(){
         return email;
     }
     public void setEmail(String em){

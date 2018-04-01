@@ -9,9 +9,8 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class tokenCollection {
-    private static Map<Integer,tokenModel> coll = new ConcurrentHashMap<>();
+    private static Map<Integer,tokenModel> coll=new ConcurrentHashMap<Integer,tokenModel>();
     private static int num = 0;
-    public static tokenCollection tokenColl=new tokenCollection();
     public tokenCollection(){
     }
     public Map getColl(){
@@ -66,14 +65,7 @@ public class tokenCollection {
 
         }
     }
-    public  Boolean createToken(String user){
-        if(ifExistsByUser(user)){
-            return false;
-        }
-        else{
-            return generateToken(user);
-        }
-    }
+
     public static Boolean generateToken(String user){
         StringBuilder token = new StringBuilder(8);
         Random rmd = new Random();

@@ -55,8 +55,9 @@ public class register extends AppCompatActivity {
             public void onClick(View view) {
                 btnReg.setEnabled(false);
                 userModel usr1=new userModel(nmInput.getText().toString(),usrInput.getText().toString(),pswInput.getText().toString(),emInput.getText().toString());
-                new postData().execute(new DBManager().getAddressApi(),usr1.toJson());
-                btnReg.setEnabled(true);
+                if(!(usr1.getName()==null||usr1.getUser()==null||usr1.getEmail()==null)) {
+                    new postData().execute(new DBManager().getAddressApi(), usr1.toJson());
+                }
             }
         });
     }
@@ -79,6 +80,7 @@ public class register extends AppCompatActivity {
         protected void onPostExecute(String s){
             super.onPostExecute(s);
             pd.setTitle("Success!");
+            btnReg.setEnabled(true);
             finish();
         }
 
