@@ -1,6 +1,5 @@
 
 # Android App with token authentication.<br>
-<meta name="google-site-verification" content="IjazKS0cq7V2Mi_8xMwBtz0MMAV6Z0YsVkn_qzUqiW4" />
 <h5>The objective of this project is to create an Android OS application that uses token authentication
 to handle login requests. The user can either register or login. When the user logins, a connection
 to check if the entered information is correct with the database is established. In the other hand, a Java application is created in order to handle the generation and validation of tokens. Android app communicates with Java app with Http requests on the http server that is established in the Java app. The emphasis stands at instances that create token model, manage token collection and connect with database. The following paper will present the architecture, user interface wireframe
